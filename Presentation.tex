@@ -1,81 +1,53 @@
 \documentclass[aspectratio=169]{beamer}
 
-%-----------------------------------
-% Custom Colors
-%-----------------------------------
-\definecolor{myorange}{HTML}{ff7828}
-\definecolor{mydark}{HTML}{231f20}
-\definecolor{mylightgrey}{HTML}{e6e6e6}       % Very light grey
-\definecolor{slightlylighterdark}{HTML}{333333} % Lighter dark background for blocks
-
-%-----------------------------------
-% Theme and Font
-%-----------------------------------
-\usetheme{Madrid}
-
-%-----------------------------------
-% Beamer Color Customization
-%-----------------------------------
-\setbeamercolor{title}{fg=mydark, bg=myorange}
-\setbeamercolor{frametitle}{fg=mydark, bg=myorange}
-\setbeamercolor{structure}{fg=myorange}
-\setbeamercolor{normal text}{fg=mylightgrey}
-\setbeamercolor{background canvas}{bg=mydark}
-\setbeamercolor{footline}{fg=mydark, bg=myorange}
-
-% Swapped colors for the block title
-\setbeamercolor{block title}{bg=myorange, fg=mydark}
-\setbeamercolor{block body}{fg=mylightgrey, bg=slightlylighterdark}
-
-% Add the graphics package
 \usepackage{graphicx}
 
-% Set a background image
+\definecolor{orange}{HTML}{ff7828}
+\definecolor{dark}{HTML}{231f20}
+\definecolor{light}{HTML}{e6e6e6}
+
+\usetheme{Madrid}
+
+\setbeamercolor{title}{fg=dark, bg=orange}
+\setbeamercolor{frametitle}{fg=dark, bg=orange}
+\setbeamercolor{structure}{fg=orange}
+\setbeamercolor{normal text}{fg=light}
+\setbeamercolor{background canvas}{bg=dark}
+\setbeamercolor{footline}{fg=dark, bg=orange}
+
 \usebackgroundtemplate{%
   \includegraphics[width=\paperwidth,height=\paperheight]{background.jpg}
 }
 
-%-----------------------------------
-% Footer Setup (Title left, Page # right)
-%-----------------------------------
 \setbeamertemplate{footline}{%
   \begin{beamercolorbox}[wd=\paperwidth,ht=3.5ex,dp=1.5ex]{footline}%
     \hbox to \paperwidth{%
       \hspace*{1em}%
-      \textcolor{mydark}{\insertshorttitle}%
+      \textcolor{dark}{\insertshorttitle}%
       \hfill
-      \textcolor{mydark}{\insertframenumber{} / \inserttotalframenumber}%
+      \textcolor{dark}{\insertframenumber{} / \inserttotalframenumber}%
       \hspace*{1em}%
     }%
   \end{beamercolorbox}%
 }
 \setbeamertemplate{navigation symbols}{}
 
-%-----------------------------------
-% Custom Bullets
-%-----------------------------------
-\setbeamertemplate{itemize item}{\textcolor{myorange}{•}}
-\setbeamertemplate{itemize subitem}{\textcolor{myorange}{•}}
-\setbeamertemplate{itemize subsubitem}{\textcolor{myorange}{•}}
+\setbeamertemplate{itemize item}{\textcolor{orange}{•}}
+\setbeamertemplate{itemize subitem}{\textcolor{orange}{•}}
+\setbeamertemplate{itemize subsubitem}{\textcolor{orange}{•}}
 
-
-%-----------------------------------
-% Document Metadata
-%-----------------------------------
 \title[LoRa APRS: Long-Range, Low-Power Communication]{LoRa APRS: Long-Range, Low-Power Communication}
 \author{LB5JJ}
 \date{}
 
+
 \begin{document}
 
-%-----------------------------------
-% Title Frame
-%-----------------------------------
 \begin{frame}
   \frametitle{LoRa APRS: Long-Range, Low-Power Communication}
   \begin{center}
-    {\Huge \textbf{\textcolor{myorange}{Long-Range Tracking and\\Messaging on 433 MHz}}} \\[1cm]
-    {\Large \textcolor{mylightgrey}{LB5JJ}}
+    {\Huge \textbf{\textcolor{orange}{Long-Range Tracking and\\Messaging on 433 MHz}}} \\[1cm]
+    {\Large \textcolor{light}{LB5JJ}}
   \end{center}
 \end{frame}
 

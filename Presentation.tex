@@ -1,6 +1,6 @@
 \documentclass[aspectratio=169]{beamer}
 
-\usepackage{graphicx}
+\usepackage{adjustbox}
 
 \definecolor{orange}{HTML}{ff7828}
 \definecolor{dark}{HTML}{231f20}
@@ -51,154 +51,228 @@
 
 \begin{frame}[t]
   \frametitle{Introduction}
-  \begin{itemize}
-    \item What is APRS?
-    \medskip
-    \begin{itemize}
-      \item Automatic Packet Reporting System
-      \medskip
-      \item Used for real-time digital communications in amateur radio
-      \medskip
-      \item Mostly used on 144.800 MHz (Let's change that)
-    \end{itemize}
-    \medskip
-    \item What is APRS for?
-    \medskip
-    \begin{itemize}
-      \item Tracking
-      \medskip
-      \item Messaging
-      \medskip
-      \item Weather station and other sensors
-    \end{itemize}
-  \end{itemize}
+  \begin{columns}
+    \begin{column}{0.66\textwidth}
+      \begin{itemize}
+        \item What is APRS?
+        \medskip
+        \begin{itemize}
+          \item Automatic Packet Reporting System
+          \medskip
+          \item Tracking and messaging in amateur radio
+          \medskip
+          \item Mostly used on 144.800 MHz (let's change that)
+        \end{itemize}
+        \medskip
+        \item What is APRS for?
+        \medskip
+        \begin{itemize}
+          \item Tracking
+          \medskip
+          \item Messaging
+          \medskip
+          \item Weather station and other sensors
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \adjustbox{padding=10pt}{
+        \includegraphics[width=0.8\textwidth]{aprs.jpg}
+      }
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}[t]
   \frametitle{Introduction to LoRa}
-  \begin{itemize}
-    \item What is LoRa?
-    \medskip
-    \begin{itemize}
-      \item Long Range, Low Power wireless technology
-      \medskip
-      \item Based on Chirp Spread Spectrum (CSS) modulation
-    \end{itemize}
-    \medskip
-    \item LoRa Properties
-    \medskip
-    \begin{itemize}
-      \item Long-range communication (100+ km in open areas)
-      \medskip
-      \item Low power consumption
-    \end{itemize}
-  \end{itemize}
+  \begin{columns}
+    \begin{column}{0.66\textwidth}
+      \begin{itemize}
+        \item What is LoRa?
+        \medskip
+        \begin{itemize}
+          \item Long Range, Low Power wireless technology
+          \medskip
+          \item Based on Chirp Spread Spectrum (CSS) modulation
+        \end{itemize}
+        \medskip
+        \item LoRa Properties
+        \medskip
+        \begin{itemize}
+          \item Long-range communication (100+ km in open areas)
+          \medskip
+          \item Low power consumption
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \adjustbox{padding=10pt}{
+        \includegraphics[width=0.8\textwidth]{lora-board.jpg}
+      }
+    \end{column}
+  \end{columns}
 \end{frame}
+
 
 \begin{frame}[t]
   \frametitle{What is LoRa APRS?}
-  \begin{itemize}
-    \item Combining LoRa and APRS
-    \medskip
-    \item Advantages over traditional APRS
-    \medskip
-    \begin{itemize}
-      \item Greater range with lower power
-      \medskip
-      \item Suitable for modern, low-cost hardware
-      \medskip
-      \item Enhanced reliability in challenging environments
-    \end{itemize}
-  \end{itemize}
+  \begin{columns}
+    \begin{column}{0.66\textwidth}
+      \begin{itemize}
+        \item Combining LoRa and APRS
+        \medskip
+        \item Advantages over traditional APRS
+        \medskip
+        \begin{itemize}
+          \item Greater range with lower power
+          \medskip
+          \item Suitable for modern, low-cost hardware
+          \medskip
+          \item Enhanced reliability in challenging environments
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \adjustbox{padding=10pt}{
+        \includegraphics[width=0.8\textwidth]{t-deck-plus.jpg}
+      }
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}[t]
   \frametitle{Hardware}
-  \begin{itemize}
-    \item SX1276/78
-    \medskip
-    \item Arduino, ESP32
-    \medskip
-    \item GPS receivers for position tracking
-    \medskip
-    \item Pre-built modules with all 3 functions on one PCB
-  \end{itemize}
+  \begin{columns}
+    \begin{column}{0.66\textwidth}
+      \begin{itemize}
+        \item SX1276/78
+        \medskip
+        \item Arduino, ESP32
+        \medskip
+        \item GPS receivers for position tracking
+        \medskip
+        \item Pre-built modules with all 3 functions on one PCB
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \adjustbox{padding=10pt}{
+        \includegraphics[width=0.8\textwidth]{hardware.jpg}
+      }
+    \end{column}
+  \end{columns}
+
 \end{frame}
 
 \begin{frame}[t]
   \frametitle{Software Components}
-  \begin{itemize}
-    \item Ricardo Guzman (CA2RXU) firmware:
-    \medskip
-    \begin{itemize}
-      \item Tracker
-      \medskip
-      \item iGate/Digipeater
-    \end{itemize}
-    \medskip
-    \item APRS.fi app for iPhone (BLE)
-    \medskip
-    \item APRSDroid for Android (BLE)
-    \medskip
-    \item PinPoint APRS for Windows (BLE, USB Serial or WiFi)
-  \end{itemize}
+  \begin{columns}
+    \begin{column}{0.66\textwidth}
+      \begin{itemize}
+        \item Ricardo Guzman (CA2RXU) firmware:
+        \medskip
+        \begin{itemize}
+          \item Tracker
+          \medskip
+          \item iGate/Digipeater
+        \end{itemize}
+        \medskip
+        \item APRS.fi app for iPhone (BLE)
+        \medskip
+        \item APRSDroid for Android (BLE)
+        \medskip
+        \item PinPoint APRS for Windows (BLE, USB Serial or WiFi)
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \adjustbox{padding=10pt}{
+        \includegraphics[width=0.8\textwidth]{software.png}
+      }
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}[t]
   \frametitle{How LoRa APRS Works}
-  \begin{itemize}
-    \item Get position from GPS, or;
-    \medskip
-    \item Enter message on phone or keyboard
-    \medskip
-    \item Encode as APRS message
-    \medskip
-    \item Packet sent over LoRa
-    \medskip
-    \item Repeated by Digipeaters
-    \medskip
-    \item Relayed via the Internet by iGates
-    \medskip
-    \item Received by other LoRa APRS devices
-  \end{itemize}
+  \begin{columns}
+    \begin{column}{0.66\textwidth}
+      \begin{itemize}
+        \item Get position from GPS, or;
+        \medskip
+        \item Enter message on phone or keyboard
+        \medskip
+        \item Encode as APRS message
+        \medskip
+        \item Packet sent over LoRa
+        \medskip
+        \item Repeated by Digipeaters
+        \medskip
+        \item Relayed via the Internet by iGates
+        \medskip
+        \item Received by other LoRa APRS devices
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \adjustbox{padding=10pt}{
+        \includegraphics[width=0.8\textwidth]{antenna.jpg}
+      }
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}[t]
   \frametitle{Applications and Use Cases}
-  \begin{itemize}
-    \item Adventure tracking (SOTA, POTA, Hiking)
-    \medskip
-    \item Off-grid messaging
-    \medskip
-    \item Disaster and emergency communication and tracking
-    \medskip
-    \item Monitoring weather stations and other sensors
-    \medskip
-    \begin{itemize}
-      \item Alarms
-      \medskip
-      \item Temperature
-      \medskip
-      \item Battery voltage
-      \medskip
-      \item Others
-    \end{itemize}
-  \end{itemize}
-\end{frame}
+  \begin{columns}
+    \begin{column}{0.66\textwidth}
+      \begin{itemize}
+        \item Adventure tracking (SOTA, POTA, Hiking)
+        \medskip
+        \item Off-grid messaging
+        \medskip
+        \item Disaster and emergency communication and tracking
+        \medskip
+        \item Monitoring weather stations and other sensors
+        \medskip
+        \begin{itemize}
+          \item Alarms
+          \medskip
+          \item Temperature
+          \medskip
+          \item Battery voltage
+          \medskip
+          \item Others
+        \end{itemize}
+      \end{itemize}
+      \end{column}
+      \begin{column}{0.33\textwidth}
+        \adjustbox{padding=10pt}{
+          \includegraphics[width=0.8\textwidth]{tracking.jpg}
+        }
+      \end{column}
+    \end{columns}
+  \end{frame}
 
 \begin{frame}[t]
   \frametitle{Setting Up Your LoRa APRS System}
-  \begin{itemize}
-    \item Acquire LoRa module (eBay, AliExpress, etc)
-    \medskip
-    \item Install firmware (Web installer for Guzman Firmware)
-    \medskip
-    \item Configure (Web config for Guzman Firmware)
-    \medskip
-    \item Connect to APRS-IS (for iGate)
-    \medskip
-    \item Connect to phone / PC (Optional; for tracking / messaging)
-  \end{itemize}
+  \begin{columns}
+    \begin{column}{0.66\textwidth}
+      \begin{itemize}
+        \item Acquire LoRa module (eBay, AliExpress, etc)
+        \medskip
+        \item Install firmware (Web installer for Guzman Firmware)
+        \medskip
+        \item Configure (Web config for Guzman Firmware)
+        \medskip
+        \item Connect to APRS-IS (for iGate)
+        \medskip
+        \item Connect to phone / PC (Optional; for tracking / messaging)
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \adjustbox{padding=10pt}{
+        \includegraphics[width=0.8\textwidth]{install.png}
+      }
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}[t]
